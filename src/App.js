@@ -41,7 +41,6 @@ class App extends Component {
 
     try {
       const todos = await loadData();
-
       this.setState({
         todos,
         filteredTodos: todos,
