@@ -41,6 +41,7 @@ class App extends Component {
 
     try {
       const todos = await loadData();
+
       this.setState({
         todos,
         filteredTodos: todos,
@@ -48,6 +49,8 @@ class App extends Component {
         isLoading: false,
       });
     } catch (error) {
+      console.log(error.message);
+
       this.setState({
         error: error.message,
         isLoading: false,
